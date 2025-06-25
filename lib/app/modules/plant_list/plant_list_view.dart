@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:plant_app/app/modules/plant_list/plant_list_header.dart';
 import '../../widgets/plant_card.dart';
 
 class PlantListView extends StatelessWidget {
