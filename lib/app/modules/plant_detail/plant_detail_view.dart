@@ -10,74 +10,51 @@ class PlantDetailView extends StatelessWidget {
     final Plant plant = Get.arguments;
 
     return Scaffold(
+      backgroundColor: const Color(0xFF1A1B1A),
       body: ListView(
+        padding: const EdgeInsets.all(16),
         children: [
-          Container(
-            width: 511,
-            height: 1108,
-            decoration: BoxDecoration(
-              color: const Color(0xFF1A1B1A),
-              borderRadius: BorderRadius.circular(68),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x4C2E481E),
-                  blurRadius: 112,
-                  offset: Offset(-101.8, 137.6),
-                ),
-              ],
+          ClipRRect(
+            borderRadius: BorderRadius.circular(24),
+            child: Image.network(
+              plant.imageUrl,
+              height: 350,
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
-            child: Stack(
-              children: [
-                // Replace with dynamic values
-                Positioned(
-                  left: 25,
-                  top: 720,
-                  child: SizedBox(
-                    width: 460,
-                    height: 200,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          plant.name,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontFamily: 'Lexend',
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          plant.description,
-                          style: const TextStyle(
-                            color: Color(0xFFB5B5B5),
-                            fontSize: 14,
-                            fontFamily: 'Lexend',
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 50,
-                  left: 30,
-                  right: 30,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.network(
-                      plant.imageUrl,
-                      height: 600,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                // Optional: Back button, share, etc.
-              ],
+          ),
+          const SizedBox(height: 20),
+          Text(
+            plant.name,
+            style: const TextStyle(
+              fontSize: 28,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Lexend',
             ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            plant.description,
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+              fontFamily: 'Lexend',
+            ),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Chip(label: Text(plant.category)),
+              const SizedBox(width: 10),
+              Chip(label: Text(plant.region)),
+              const SizedBox(width: 10),
+              if (plant.isEndemic)
+                const Chip(
+                  label: Text("Endemic"),
+                  backgroundColor: Colors.green,
+                ),
+            ],
           ),
         ],
       ),
