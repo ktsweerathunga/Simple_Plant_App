@@ -55,7 +55,7 @@ class PlantListHeader extends StatelessWidget {
                 left: 25.78,
                 top: 150.63,
                 child: Text(
-                  'Hey Urvashi',
+                  'Hey Welcome',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF91A37F),
