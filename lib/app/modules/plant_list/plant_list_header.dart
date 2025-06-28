@@ -37,7 +37,7 @@ class PlantListHeader extends StatelessWidget {
                     height: 75.99,
                     decoration: BoxDecoration(
                       image: const DecorationImage(
-                        image: NetworkImage("https://placehold.co/59x76"),
+                        image: NetworkImage("aaa"),
                         fit: BoxFit.cover,
                       ),
                       boxShadow: const [
