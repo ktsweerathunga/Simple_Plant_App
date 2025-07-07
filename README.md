@@ -5,6 +5,14 @@ Users can browse a collection of plants, filter by ecological region (*Wet Zone,
 
 ---
 
+## 🛠 Project Status
+
+🚧 **This app is currently in active development.**  
+More features, polish, and educational content will be added over time.  
+Feel free to open issues or contribute ideas!
+
+---
+
 ## ✨ Features
 
 - ✅ **Beautiful Welcome Screen**
@@ -33,5 +41,17 @@ Users can browse a collection of plants, filter by ecological region (*Wet Zone,
 - 📷 Integrate **image recognition** for plant identification
 - ⭐ Allow users to **bookmark favorite plants**
 - 🌐 Multi-language support (Sinhala, Tamil, English)
+
+  ---
+This is a Flutter mobile app designed to help **kids and nature lovers learn about Sri Lankan plants** in an interactive and visually engaging way. 🌿  
+
+Users can:
+
+- Browse a collection of plants with beautiful images.
+- Filter by ecological region (*Wet Zone, Dry Zone, Hill Country, Coastal*).
+- Explore detailed information about each species.
+
+The goal is to inspire awareness of Sri Lanka’s biodiversity while offering an enjoyable learning experience.
+
 
 ![image alt](https://github.com/ktsweerathunga/Simple_Plant_App/blob/49135e7f45cf3fd9bd10aaf92f62258a73c2d8cc/Plant%20UI.png)
